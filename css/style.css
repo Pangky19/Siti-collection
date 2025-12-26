@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(
+        135deg,
+        #ff8fc7,
+        #ffd1e8,
+        #fff0f7
+    );
+}
+
+.card,
+.sidebar,
+.product-area {
+    box-shadow: 0 15px 40px rgba(255, 140, 190, 0.15);
+}
+
+
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: #ffebf4;
+    border-bottom: 2px solid #f4c9db;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e45a9b;
+}
+
+.search {
+    flex: 1;
+    display: flex;
+}
+
+.search input {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #f4c9db;
+}
+
+.search button {
+    margin-left: 8px;
+    background: #e45a9b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* ICONS */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-box {
+    position: relative;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background: #e45a9b;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #e45a9b, #f08bbf);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+/* MAIN */
+.main-wrapper {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+}
+
+.new-arrival {
+    width: 65%;
+}
+
+.new-arrival h2 {
+    font-family: "Caveat", cursive;
+    font-size: 40px;
+    font-weight: 600;
+    color: #a12c63;
+    letter-spacing: 0.5px;
+}
+
+
+/* SLIDER UTAMA */
+.product-area {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.product-image img {
+    width: 260px;
+    border-radius: 12px;
+    border: 2px solid #f4c9db;
+    transition: opacity 0.4s ease;
+}
+
+.fade {
+    opacity: 0;
+}
+
+.arrow {
+    border: none;
+    background: #ffd6ea;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* INFO */
+.product-info h3 {
+    color: #e45a9b;
+}
+
+.price {
+    font-weight: bold;
+    color: #c93f7c;
+}
+
+.add-to-cart {
+    margin-top: 10px;
+    background: #e45a9b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 25%;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 2px solid #f4c9db;
+}
+
+.sidebar h3 {
+    color: #e45a9b;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 12px 12px 12px 40px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border: 1px solid #f4c9db;
+    cursor: pointer;
+    position: relative;
+    transition: 0.25s ease;
+}
+
+.sidebar li::before {
+    content: attr(data-icon);
+    position: absolute;
+    left: 12px;
+}
+
+.sidebar li:hover {
+    background: linear-gradient(135deg, #ffe3f1, #fff);
+    transform: translateX(6px);
+}
+
+.sidebar li.active {
+    font-weight: bold;
+    color: #d73f86;
+}
+
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.card {
+    min-width: 180px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #f4c9db;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.bg-shape {
+    position: fixed;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.shape-1 {
+    background: #ff8fc7;
+    top: -120px;
+    left: -120px;
+}
+
+.shape-2 {
+    background: #ffd1e8;
+    bottom: -140px;
+    right: -140px;
+}
+
+/* NEW ARRIVAL CAROUSEL */
+.carousel-wrapper {
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+/* ITEM */
+.carousel-item {
+    width: 200px;
+    text-align: center;
+    opacity: 0.45;
+    transform: scale(0.85);
+    transition: 0.5s ease;
+}
+
+/* GAMBAR */
+.carousel-item img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+/* TEKS */
+.carousel-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6b4c59;
+}
+
+/* ITEM AKTIF (TENGAH) */
+.carousel-item.active {
+    width: 260px;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.carousel-item.active p {
+    font-weight: 600;
+    color: #a12c63;
+}
+
+/* PANAH CUSTOM */
+.nav {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+}
+
+.nav span {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-right: 3px solid #a12c63;
+    border-bottom: 3px solid #a12c63;
+    transform: rotate(-45deg);
+    transition: 0.3s ease;
+}
+
+.nav.prev span {
+    transform: rotate(135deg);
+}
+
+.nav:hover span {
+    transform: scale(1.2);
+}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .main-wrapper {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .new-arrival {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
