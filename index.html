@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <style>
-        /* ===== RESET & GLOBAL STYLES ===== */
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
@@ -24,7 +23,6 @@
             line-height: 1.6;
         }
 
-        /* ===== BACKGROUND SHAPES ===== */
         .bg-shape {
             position: fixed;
             width: 320px;
@@ -47,20 +45,22 @@
             right: -140px;
         }
 
-        /* ===== HEADER & NAVIGATION ===== */
         header {
             display: flex;
             align-items: center;
-            padding: 15px 40px;
+            padding: 15px 5%;
             background: rgba(255, 235, 244, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 2px solid #f4c9db;
             gap: 20px;
-            flex-wrap: wrap;
             position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: 0 5px 20px rgba(228, 90, 155, 0.1);
+            width: 100%;
+            margin: 0;
+            left: 0;
+            right: 0;
         }
 
         .logo {
@@ -71,18 +71,19 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            white-space: nowrap;
         }
 
         .logo i {
             font-size: 24px;
         }
 
-        /* SEARCH BAR */
         .search-container {
             flex: 1;
             position: relative;
             min-width: 300px;
             max-width: 500px;
+            margin: 0 20px;
         }
 
         #searchInput {
@@ -177,7 +178,6 @@
             font-weight: 700;
         }
 
-        /* HEADER ICONS */
         .icons {
             display: flex;
             align-items: center;
@@ -234,6 +234,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            white-space: nowrap;
         }
 
         .login-btn:hover {
@@ -241,73 +242,6 @@
             box-shadow: 0 8px 20px rgba(228, 90, 155, 0.3);
         }
 
-        /* ===== HERO SECTION ===== */
-        .hero {
-            padding: 60px 40px;
-            text-align: center;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-family: "Caveat", cursive;
-            font-size: 48px;
-            color: #a12c63;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: #6b4c59;
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .btn-primary, .btn-secondary {
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: "Poppins", sans-serif;
-            font-size: 15px;
-            border: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #e45a9b, #f08bbf);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(228, 90, 155, 0.3);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: #e45a9b;
-            border: 2px solid #f4c9db;
-        }
-
-        .btn-secondary:hover {
-            background: #fff0f7;
-            border-color: #e45a9b;
-            transform: translateY(-3px);
-        }
-
-        /* ===== NEW ARRIVAL CAROUSEL ===== */
         .section-title {
             font-family: "Caveat", cursive;
             font-size: 42px;
@@ -332,6 +266,7 @@
             max-width: 1200px;
             margin: 0 auto 50px;
             padding: 20px;
+            overflow: hidden;
         }
 
         .carousel-container {
@@ -349,13 +284,12 @@
 
         .carousel-track {
             display: flex;
-            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             gap: 30px;
-            width: max-content;
         }
 
         .carousel-slide {
-            width: 220px;
+            width: 280px;
             text-align: center;
             opacity: 0.5;
             transform: scale(0.9);
@@ -366,7 +300,7 @@
 
         .carousel-slide img {
             width: 100%;
-            height: 280px;
+            height: 350px;
             object-fit: cover;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -383,14 +317,12 @@
         }
 
         .carousel-slide.active {
-            width: 280px;
             opacity: 1;
             transform: scale(1);
             z-index: 2;
         }
 
         .carousel-slide.active img {
-            height: 350px;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
             border-color: #e45a9b;
         }
@@ -401,7 +333,6 @@
             font-size: 18px;
         }
 
-        /* NAVIGATION BUTTONS */
         .nav-btn {
             position: absolute;
             top: 50%;
@@ -423,11 +354,11 @@
         }
 
         .prev-btn {
-            left: -25px;
+            left: 10px;
         }
 
         .next-btn {
-            right: -25px;
+            right: 10px;
         }
 
         .nav-btn:hover {
@@ -462,11 +393,10 @@
             transform: scale(1.2);
         }
 
-        /* ===== PRODUCTS SECTION ===== */
         .products-section {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 40px 80px;
+            padding: 0 5% 80px;
         }
 
         .section-header {
@@ -514,7 +444,6 @@
             color: #e45a9b;
         }
 
-        /* PRODUCTS GRID - 3x3 Layout */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -620,7 +549,7 @@
             gap: 12px;
         }
 
-        .add-to-cart-btn, .view-details-btn, .wishlist-btn {
+        .add-to-cart-btn, .view-details-btn {
             flex: 1;
             padding: 12px;
             border: none;
@@ -658,27 +587,13 @@
             transform: scale(1.05);
         }
 
-        .wishlist-btn {
-            width: 45px;
-            background: white;
-            color: #e45a9b;
-            border: 2px solid #f4c9db;
-        }
-
-        .wishlist-btn:hover {
-            background: #fff0f7;
-            border-color: #e45a9b;
-            color: #ff6b6b;
-        }
-
-        /* ===== FEATURES SECTION ===== */
         .features {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
             max-width: 1200px;
             margin: 60px auto;
-            padding: 0 40px;
+            padding: 0 5%;
         }
 
         .feature-card {
@@ -713,10 +628,9 @@
             font-size: 14px;
         }
 
-        /* ===== FOOTER ===== */
         footer {
             background: linear-gradient(135deg, #ff8fc7, #ffd1e8);
-            padding: 60px 40px 30px;
+            padding: 60px 5% 30px;
             margin-top: 80px;
             border-top: 3px solid #f4c9db;
         }
@@ -835,7 +749,6 @@
             font-size: 14px;
         }
 
-        /* ===== MODALS ===== */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -899,7 +812,6 @@
             background: #ffe3f1;
         }
 
-        /* AUTH MODAL */
         .auth-tabs {
             display: flex;
             border-bottom: 2px solid #f4c9db;
@@ -1063,7 +975,6 @@
             box-shadow: 0 8px 20px rgba(228, 90, 155, 0.3);
         }
 
-        /* CART MODAL */
         .cart-modal {
             max-width: 700px;
         }
@@ -1279,7 +1190,6 @@
             box-shadow: 0 10px 25px rgba(228, 90, 155, 0.3);
         }
 
-        /* ===== CHATBOT ===== */
         .chatbot-toggle {
             position: fixed;
             bottom: 30px;
@@ -1453,7 +1363,6 @@
             transform: translateY(-2px);
         }
 
-        /* ===== NOTIFICATION ===== */
         .notification {
             position: fixed;
             top: 30px;
@@ -1481,7 +1390,6 @@
             to { transform: translateX(100%); opacity: 0; }
         }
 
-        /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1200px) {
             .products-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1494,14 +1402,6 @@
             
             .footer-content {
                 grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .carousel-slide {
-                width: 200px;
-            }
-            
-            .carousel-slide.active {
-                width: 260px;
             }
         }
 
@@ -1516,14 +1416,7 @@
                 width: 100%;
                 min-width: auto;
                 max-width: 100%;
-            }
-            
-            .hero {
-                padding: 40px 20px;
-            }
-            
-            .hero h1 {
-                font-size: 36px;
+                margin: 10px 0;
             }
             
             .products-section {
@@ -1557,16 +1450,12 @@
                 gap: 30px;
             }
             
-            .carousel-wrapper {
-                padding: 10px;
-            }
-            
             .carousel-slide {
-                width: 170px;
+                width: 240px;
             }
             
-            .carousel-slide.active {
-                width: 220px;
+            .carousel-slide img {
+                height: 300px;
             }
             
             .nav-btn {
@@ -1575,11 +1464,11 @@
             }
             
             .prev-btn {
-                left: -15px;
+                left: 5px;
             }
             
             .next-btn {
-                right: -15px;
+                right: 5px;
             }
             
             .chatbot-container {
@@ -1590,10 +1479,6 @@
         }
 
         @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 32px;
-            }
-            
             .section-title {
                 font-size: 36px;
             }
@@ -1603,18 +1488,10 @@
             }
             
             .carousel-slide {
-                width: 150px;
-            }
-            
-            .carousel-slide.active {
-                width: 190px;
+                width: 200px;
             }
             
             .carousel-slide img {
-                height: 200px;
-            }
-            
-            .carousel-slide.active img {
                 height: 250px;
             }
             
@@ -1641,7 +1518,6 @@
             }
         }
 
-        /* ===== ANIMATIONS ===== */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -1650,13 +1526,50 @@
         .product-card, .feature-card {
             animation: fadeIn 0.6s ease;
         }
+
+        header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.search-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+}
+
+.icon-btn,
+.login-btn,
+#searchInput {
+    height: 45px;
+}
+
     </style>
 </head>
 <body>
 <div class="bg-shape shape-1"></div>
 <div class="bg-shape shape-2"></div>
 
-<!-- HEADER -->
 <header>
     <div class="logo">
         <i class="fas fa-crown"></i>
@@ -1670,9 +1583,6 @@
     </div>
 
     <div class="icons">
-        <button class="icon-btn" id="wishlistIcon" title="Wishlist">
-            <i class="fas fa-heart"></i>
-        </button>
         <button class="icon-btn" id="cartIcon" title="Keranjang">
             <i class="fas fa-shopping-cart"></i>
             <span class="cart-count" id="cartCount">0</span>
@@ -1686,21 +1596,6 @@
     </div>
 </header>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <h1>Fashion Muslim Elegan & Modis</h1>
-    <p>Koleksi terbaru blouse, gamis, hijab, dan fashion muslim lainnya dengan bahan premium dan desain terkini</p>
-    <div class="hero-buttons">
-        <button class="btn-primary" id="shopNowBtn">
-            <i class="fas fa-shopping-bag"></i> Belanja Sekarang
-        </button>
-        <button class="btn-secondary" id="viewCollectionBtn">
-            <i class="fas fa-eye"></i> Lihat Koleksi
-        </button>
-    </div>
-</section>
-
-<!-- NEW ARRIVAL -->
 <h2 class="section-title">New Arrival</h2>
 <div class="carousel-wrapper">
     <div class="carousel-container">
@@ -1752,7 +1647,6 @@
     </div>
 </div>
 
-<!-- FEATURES -->
 <div class="features">
     <div class="feature-card">
         <i class="fas fa-shipping-fast"></i>
@@ -1776,7 +1670,6 @@
     </div>
 </div>
 
-<!-- PRODUCTS SECTION -->
 <section class="products-section">
     <div class="section-header">
         <div>
@@ -1791,15 +1684,14 @@
             <button class="category-btn" data-category="hijab">Hijab</button>
             <button class="category-btn" data-category="rok">Rok</button>
             <button class="category-btn" data-category="atasan">Atasan</button>
+            <button class="category-btn" data-category="kulot">Kulot</button>
+            <button class="category-btn" data-category="outwear">Outwear</button>
         </div>
     </div>
     
-    <div class="products-grid" id="productsGrid">
-        <!-- Products loaded via JavaScript -->
-    </div>
+    <div class="products-grid" id="productsGrid"></div>
 </section>
 
-<!-- FOOTER -->
 <footer>
     <div class="footer-content">
         <div class="footer-column">
@@ -1821,6 +1713,8 @@
                 <li><a href="#"><i class="fas fa-chevron-right"></i> Rok</a></li>
                 <li><a href="#"><i class="fas fa-chevron-right"></i> Hijab</a></li>
                 <li><a href="#"><i class="fas fa-chevron-right"></i> Atasan</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right"></i> Kulot</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right"></i> Outwear</a></li>
             </ul>
         </div>
         
@@ -1852,7 +1746,6 @@
     </div>
 </footer>
 
-<!-- MODALS -->
 <div class="modal-overlay" id="loginModal">
     <div class="modal-content">
         <button class="close-modal">&times;</button>
@@ -1942,7 +1835,6 @@
     </div>
 </div>
 
-<!-- CHATBOT -->
 <div class="chatbot-toggle" id="chatbotToggle">
     <i class="fas fa-comments"></i>
 </div>
@@ -1989,160 +1881,28 @@
 </div>
 
 <script>
-    // ===== DATA PRODUK =====
     const productsData = [
-        {
-            id: 1,
-            name: "Blouse Lavender",
-            category: "blouse",
-            price: 150000,
-            oldPrice: 185000,
-            image: "assets/img1.jpg",
-            description: "Blouse pastel lembut dengan bahan adem dan jatuh cantik.",
-            badge: "TERLARIS"
-        },
-        {
-            id: 2,
-            name: "Blouse Sakura",
-            category: "blouse",
-            price: 165000,
-            oldPrice: 195000,
-            image: "assets/img2.jpg",
-            description: "Motif floral lembut dan feminin dengan bahan premium.",
-            badge: "NEW"
-        },
-        {
-            id: 3,
-            name: "Blouse Ruffle Pink",
-            category: "blouse",
-            price: 175000,
-            image: "assets/img3.jpg",
-            description: "Detail ruffle manis dan elegan untuk tampilan yang anggun."
-        },
-        {
-            id: 4,
-            name: "Gamis Abaya Sage",
-            category: "gamis",
-            price: 285000,
-            oldPrice: 350000,
-            image: "assets/img4.jpg",
-            description: "Gamis abaya warna sage yang elegan dengan bahan flowy.",
-            badge: "DISKON"
-        },
-        {
-            id: 5,
-            name: "Gamis Kaftan Maroon",
-            category: "gamis",
-            price: 320000,
-            image: "assets/img5.jpg",
-            description: "Kaftan maroon mewah dengan detail bordir yang indah.",
-            badge: "PREMIUM"
-        },
-        {
-            id: 6,
-            name: "Gamis Maxi Floral",
-            category: "gamis",
-            price: 275000,
-            image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop",
-            description: "Gamis maxi dengan motif floral yang cerah dan ceria."
-        },
-        {
-            id: 7,
-            name: "Rok A-Line Denim",
-            category: "rok",
-            price: 195000,
-            oldPrice: 225000,
-            image: "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=400&h=500&fit=crop",
-            description: "Rok denim A-line yang stylish dan nyaman dipakai.",
-            badge: "DISKON"
-        },
-        {
-            id: 8,
-            name: "Rok Plisket Navy",
-            category: "rok",
-            price: 185000,
-            image: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=400&h=500&fit=crop",
-            description: "Rok plisket navy blue dengan bahan yang jatuh sempurna."
-        },
-        {
-            id: 9,
-            name: "Cardigan Oversize",
-            category: "outwear",
-            price: 210000,
-            image: "https://plus.unsplash.com/premium_photo-1695339146408-093b2b8ddc90?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            description: "Cardigan oversize yang hangat dan cocok untuk berbagai outfit.",
-            badge: "NEW"
-        },
-        {
-            id: 10,
-            name: "Blazer Modern",
-            category: "outwear",
-            price: 350000,
-            image: "https://plus.unsplash.com/premium_photo-1698339570890-b4af61b23c1c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            description: "Blazer modern dengan potongan yang rapi dan elegan.",
-            badge: "PREMIUM"
-        },
-        {
-            id: 11,
-            name: "Kerudung Ivory",
-            category: "hijab",
-            price: 85000,
-            oldPrice: 120000,
-            image: "assets/img6.jpg",
-            description: "Kerudung ivory dengan bahan jersey yang adem dan tidak mudah luntur.",
-            badge: "DISKON"
-        },
-        {
-            id: 12,
-            name: "Hijab Segi Empat Katun",
-            category: "hijab",
-            price: 75000,
-            image: "https://images.unsplash.com/photo-1765691893444-8623b46581ec?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            description: "Hijab segi empat dari katun berkualitas tinggi."
-        },
-        {
-            id: 13,
-            name: "Kaos Oversize Graphic",
-            category: "atasan",
-            price: 125000,
-            image: "https://images.unsplash.com/photo-1661110546797-d86cc72a2765?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            description: "Kaos oversize dengan print graphic yang trendy."
-        },
-        {
-            id: 14,
-            name: "Tunik Bordir",
-            category: "atasan",
-            price: 180000,
-            oldPrice: 220000,
-            image: "https://images.unsplash.com/photo-1693987263090-9db764295654?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            description: "Tunik dengan bordir tangan yang cantik dan unik.",
-            badge: "DISKON"
-        },
-        {
-            id: 15,
-            name: "Kulot Kain Twill",
-            category: "kulot",
-            price: 195000,
-            image: "https://images.unsplash.com/photo-1638396637969-956ca903df87?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            description: "Kulot dari kain twill yang nyaman dan tidak mudah kusut."
-        },
-        {
-            id: 16,
-            name: "Kulot Wide Leg",
-            category: "kulot",
-            price: 210000,
-            image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=500&fit=crop",
-            description: "Kulot wide leg dengan potongan yang fashionable.",
-            badge: "NEW"
-        }
+        { id: 1, name: "Blouse Lavender", category: "blouse", price: 150000, oldPrice: 185000, image: "assets/img1.jpg", description: "Blouse pastel lembut dengan bahan adem dan jatuh cantik.", badge: "TERLARIS" },
+        { id: 2, name: "Blouse Sakura", category: "blouse", price: 165000, oldPrice: 195000, image: "assets/img2.jpg", description: "Motif floral lembut dan feminin dengan bahan premium.", badge: "NEW" },
+        { id: 3, name: "Blouse Ruffle Pink", category: "blouse", price: 175000, image: "assets/img3.jpg", description: "Detail ruffle manis dan elegan untuk tampilan yang anggun." },
+        { id: 4, name: "Gamis Abaya Sage", category: "gamis", price: 285000, oldPrice: 350000, image: "assets/img4.jpg", description: "Gamis abaya warna sage yang elegan dengan bahan flowy.", badge: "DISKON" },
+        { id: 5, name: "Gamis Kaftan Maroon", category: "gamis", price: 320000, image: "assets/img5.jpg", description: "Kaftan maroon mewah dengan detail bordir yang indah.", badge: "PREMIUM" },
+        { id: 6, name: "Gamis Maxi Floral", category: "gamis", price: 275000, image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop", description: "Gamis maxi dengan motif floral yang cerah dan ceria." },
+        { id: 7, name: "Rok A-Line Denim", category: "rok", price: 195000, oldPrice: 225000, image: "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=400&h=500&fit=crop", description: "Rok denim A-line yang stylish dan nyaman dipakai.", badge: "DISKON" },
+        { id: 8, name: "Rok Plisket Navy", category: "rok", price: 185000, image: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=400&h=500&fit=crop", description: "Rok plisket navy blue dengan bahan yang jatuh sempurna." },
+        { id: 9, name: "Cardigan Oversize", category: "outwear", price: 210000, image: "https://plus.unsplash.com/premium_photo-1695339146408-093b2b8ddc90?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Cardigan oversize yang hangat dan cocok untuk berbagai outfit.", badge: "NEW" },
+        { id: 10, name: "Blazer Modern", category: "outwear", price: 350000, image: "https://plus.unsplash.com/premium_photo-1698339570890-b4af61b23c1c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Blazer modern dengan potongan yang rapi dan elegan.", badge: "PREMIUM" },
+        { id: 11, name: "Kerudung Ivory", category: "hijab", price: 85000, oldPrice: 120000, image: "assets/img6.jpg", description: "Kerudung ivory dengan bahan jersey yang adem dan tidak mudah luntur.", badge: "DISKON" },
+        { id: 12, name: "Hijab Segi Empat Katun", category: "hijab", price: 75000, image: "https://images.unsplash.com/photo-1765691893444-8623b46581ec?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Hijab segi empat dari katun berkualitas tinggi." },
+        { id: 13, name: "Kaos Oversize Graphic", category: "atasan", price: 125000, image: "https://images.unsplash.com/photo-1661110546797-d86cc72a2765?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Kaos oversize dengan print graphic yang trendy." },
+        { id: 14, name: "Tunik Bordir", category: "atasan", price: 180000, oldPrice: 220000, image: "https://images.unsplash.com/photo-1693987263090-9db764295654?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Tunik dengan bordir tangan yang cantik dan unik.", badge: "DISKON" },
+        { id: 15, name: "Kulot Kain Twill", category: "kulot", price: 195000, image: "https://images.unsplash.com/photo-1638396637969-956ca903df87?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", description: "Kulot dari kain twill yang nyaman dan tidak mudah kusut." },
+        { id: 16, name: "Kulot Wide Leg", category: "kulot", price: 210000, image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=500&fit=crop", description: "Kulot wide leg dengan potongan yang fashionable.", badge: "NEW" }
     ];
 
-    // ===== GLOBAL VARIABLES =====
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let currentCategory = 'all';
-    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-    // ===== UTILITY FUNCTIONS =====
     function formatCurrency(amount) {
         return new Intl.NumberFormat('id-ID', {
             style: 'currency',
@@ -2180,7 +1940,6 @@
         }, 3000);
     }
 
-    // ===== PRODUCT DISPLAY =====
     function displayProducts(category = 'all') {
         const productsGrid = document.getElementById('productsGrid');
         const productCount = document.getElementById('productCount');
@@ -2213,15 +1972,11 @@
                         <button class="view-details-btn" data-id="${product.id}">
                             <i class="fas fa-eye"></i> Detail
                         </button>
-                        <button class="wishlist-btn" data-id="${product.id}">
-                            <i class="fas fa-heart"></i>
-                        </button>
                     </div>
                 </div>
             </div>
         `).join('');
         
-        // Add event listeners
         document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -2235,14 +1990,6 @@
                 e.stopPropagation();
                 const productId = parseInt(btn.dataset.id);
                 showProductDetails(productId);
-            });
-        });
-        
-        document.querySelectorAll('.wishlist-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const productId = parseInt(btn.dataset.id);
-                toggleWishlist(productId);
             });
         });
         
@@ -2285,11 +2032,8 @@
                             </ul>
                         </div>
                         <div class="product-actions">
-                            <button class="add-to-cart-btn" data-id="${product.id}" style="flex: 2;">
+                            <button class="add-to-cart-btn" data-id="${product.id}" style="width: 100%;">
                                 <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
-                            </button>
-                            <button class="wishlist-btn" data-id="${product.id}" style="width: 60px;">
-                                <i class="fas fa-heart"></i>
                             </button>
                         </div>
                     </div>
@@ -2309,10 +2053,6 @@
             modal.remove();
         });
         
-        modal.querySelector('.wishlist-btn').addEventListener('click', () => {
-            toggleWishlist(productId);
-        });
-        
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.remove();
@@ -2320,7 +2060,6 @@
         });
     }
 
-    // ===== CART FUNCTIONS =====
     function addToCart(productId) {
         const product = productsData.find(p => p.id === productId);
         const existingItem = cart.find(item => item.id === productId);
@@ -2384,7 +2123,6 @@
                 `;
             }).join('');
             
-            // Add event listeners
             document.querySelectorAll('.quantity-btn.minus').forEach(btn => {
                 btn.addEventListener('click', () => {
                     const id = parseInt(btn.dataset.id);
@@ -2407,7 +2145,6 @@
             });
         }
         
-        // Update summary
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
         const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         
@@ -2437,39 +2174,6 @@
         showNotification('Produk dihapus dari keranjang', 'info');
     }
 
-    // ===== WISHLIST =====
-    function toggleWishlist(productId) {
-        const product = productsData.find(p => p.id === productId);
-        const index = wishlist.findIndex(item => item.id === productId);
-        
-        if (index === -1) {
-            wishlist.push({
-                id: product.id,
-                name: product.name,
-                price: product.price,
-                image: product.image
-            });
-            showNotification(`${product.name} ditambahkan ke wishlist!`);
-        } else {
-            wishlist.splice(index, 1);
-            showNotification(`${product.name} dihapus dari wishlist`, 'info');
-        }
-        
-        localStorage.setItem('wishlist', JSON.stringify(wishlist));
-        updateWishlistIcon();
-    }
-
-    function updateWishlistIcon() {
-        const wishlistIcon = document.getElementById('wishlistIcon');
-        const count = wishlist.length;
-        if (count > 0) {
-            wishlistIcon.innerHTML = `<i class="fas fa-heart"></i><span class="cart-count">${count}</span>`;
-        } else {
-            wishlistIcon.innerHTML = `<i class="fas fa-heart"></i>`;
-        }
-    }
-
-    // ===== CAROUSEL =====
     function setupCarousel() {
         const track = document.querySelector('.carousel-track');
         const slides = Array.from(document.querySelectorAll('.carousel-slide'));
@@ -2481,16 +2185,39 @@
         let currentIndex = 0;
         let autoSlideInterval;
         
+        function cloneSlides() {
+            const firstSlide = slides[0].cloneNode(true);
+            const secondSlide = slides[1].cloneNode(true);
+            const lastSlide = slides[totalSlides - 1].cloneNode(true);
+            const secondLastSlide = slides[totalSlides - 2].cloneNode(true);
+            
+            track.appendChild(firstSlide);
+            track.appendChild(secondSlide);
+            track.insertBefore(lastSlide, slides[0]);
+            track.insertBefore(secondLastSlide, slides[0]);
+            
+            const newSlides = Array.from(track.querySelectorAll('.carousel-slide'));
+            return newSlides;
+        }
+        
+        const allSlides = cloneSlides();
+        const totalAllSlides = allSlides.length;
+        
         function updateCarousel() {
-            const slideWidth = slides[0].offsetWidth;
+            const slideWidth = allSlides[0].offsetWidth;
             const gap = 30;
-            const offset = -(currentIndex * (slideWidth + gap));
             
-            track.style.transform = `translateX(${offset}px)`;
+            track.style.transform = `translateX(${-((currentIndex + 2) * (slideWidth + gap))}px)`;
             
-            slides.forEach((slide, index) => {
-                slide.classList.toggle('active', index === currentIndex);
+            allSlides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                slide.style.opacity = '0.5';
+                slide.style.transform = 'scale(0.9)';
             });
+            
+            allSlides[currentIndex + 2].classList.add('active');
+            allSlides[currentIndex + 2].style.opacity = '1';
+            allSlides[currentIndex + 2].style.transform = 'scale(1)';
             
             updateDots();
         }
@@ -2503,12 +2230,40 @@
         
         function nextSlide() {
             currentIndex = (currentIndex + 1) % totalSlides;
-            updateCarousel();
+            
+            if (currentIndex === 0) {
+                setTimeout(() => {
+                    track.style.transition = 'none';
+                    currentIndex = totalSlides;
+                    updateCarousel();
+                    setTimeout(() => {
+                        track.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                        currentIndex = 0;
+                        updateCarousel();
+                    }, 50);
+                }, 800);
+            } else {
+                updateCarousel();
+            }
         }
         
         function prevSlide() {
             currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-            updateCarousel();
+            
+            if (currentIndex === totalSlides - 1) {
+                setTimeout(() => {
+                    track.style.transition = 'none';
+                    currentIndex = -1;
+                    updateCarousel();
+                    setTimeout(() => {
+                        track.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                        currentIndex = totalSlides - 1;
+                        updateCarousel();
+                    }, 50);
+                }, 800);
+            } else {
+                updateCarousel();
+            }
         }
         
         function goToSlide(index) {
@@ -2547,13 +2302,14 @@
         track.addEventListener('mouseenter', stopAutoSlide);
         track.addEventListener('mouseleave', startAutoSlide);
         
-        window.addEventListener('resize', updateCarousel);
+        window.addEventListener('resize', () => {
+            setTimeout(updateCarousel, 100);
+        });
         
         updateCarousel();
         startAutoSlide();
     }
 
-    // ===== SEARCH =====
     function setupSearch() {
         const searchInput = document.getElementById('searchInput');
         const searchResults = document.getElementById('searchResults');
@@ -2640,7 +2396,6 @@
         });
     }
 
-    // ===== CATEGORY FILTER =====
     function setupCategories() {
         const categoryBtns = document.querySelectorAll('.category-btn');
         
@@ -2655,7 +2410,6 @@
         });
     }
 
-    // ===== AUTH MODAL =====
     function setupAuthModal() {
         const loginModal = document.getElementById('loginModal');
         const loginBtn = document.getElementById('loginBtn');
@@ -2790,7 +2544,6 @@
         });
     }
 
-    // ===== CHATBOT =====
     function setupChatbot() {
         const chatbotToggle = document.getElementById('chatbotToggle');
         const chatbotContainer = document.getElementById('chatbotContainer');
@@ -2880,7 +2633,6 @@
             });
         });
         
-        // Auto open chatbot on first visit
         if (!localStorage.getItem('chatbotShown')) {
             setTimeout(() => {
                 chatbotContainer.style.display = 'flex';
@@ -2889,7 +2641,6 @@
         }
     }
 
-    // ===== CHECKOUT =====
     function setupCheckout() {
         const checkoutBtn = document.getElementById('checkoutBtn');
         
@@ -2919,14 +2670,10 @@
         });
     }
 
-    // ===== INITIALIZE =====
     document.addEventListener('DOMContentLoaded', () => {
-        // Initialize
         updateCart();
-        updateWishlistIcon();
         displayProducts('all');
         
-        // Setup all functionalities
         setupCarousel();
         setupCategories();
         setupSearch();
@@ -2934,28 +2681,7 @@
         setupChatbot();
         setupCheckout();
         
-        // Event listeners
         document.getElementById('cartIcon').addEventListener('click', showCart);
-        document.getElementById('wishlistIcon').addEventListener('click', () => {
-            showNotification(`Anda memiliki ${wishlist.length} item di wishlist`, 'info');
-        });
-        
-        document.getElementById('shopNowBtn').addEventListener('click', () => {
-            document.querySelector('.products-section').scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-        
-        document.getElementById('viewCollectionBtn').addEventListener('click', () => {
-            currentCategory = 'all';
-            document.querySelectorAll('.category-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.category === 'all');
-            });
-            displayProducts('all');
-            document.querySelector('.products-section').scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
         
         document.getElementById('subscribeBtn').addEventListener('click', () => {
             const email = document.getElementById('newsletterEmail').value;
@@ -2967,7 +2693,6 @@
             }
         });
         
-        // Close modals when clicking outside
         document.querySelectorAll('.modal-overlay').forEach(modal => {
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
@@ -2976,7 +2701,6 @@
             });
         });
         
-        // Add CSS for animations
         const style = document.createElement('style');
         style.textContent = `
             @keyframes slideIn {
@@ -2989,8 +2713,6 @@
             }
         `;
         document.head.appendChild(style);
-        
-        console.log('Siti\'s Collection loaded successfully! 🛍️');
     });
 </script>
 </body>
